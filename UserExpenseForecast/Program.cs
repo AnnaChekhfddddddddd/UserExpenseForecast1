@@ -161,8 +161,13 @@ void ShowAllExpenses(ExpenseService expenseService)
 
     foreach (var e in expenses)
     {
-        Console.WriteLine($"{e.Date:dd.MM.yyyy HH:mm} | {e.Category,-15} | {e.Amount} грн");
+    var category = string.IsNullOrWhiteSpace(e.Category)
+        ? "(без категорії)"
+        : e.Category;
+
+    Console.WriteLine($"{e.Date:dd.MM.yyyy HH:mm} | {category,-15} | {e.Amount} грн");
     }
+
 }
 
 void ShowMonthlyTotal(ExpenseService expenseService)
@@ -220,8 +225,13 @@ void ShowExpensesByCategory(ExpenseService expenseService)
 
     foreach (var e in expenses)
     {
-        Console.WriteLine($"{e.Date:dd.MM.yyyy HH:mm} | {e.Category,-15} | {e.Amount} грн");
+    var categoryText = string.IsNullOrWhiteSpace(e.Category)
+        ? "(без категорії)"
+        : e.Category;
+
+    Console.WriteLine($"{e.Date:dd.MM.yyyy HH:mm} | {categoryText,-15} | {e.Amount} грн");
     }
+
 
     decimal total = expenses.Sum(e => e.Amount);
     Console.WriteLine($"\nРазом у цій категорії: {total} грн");

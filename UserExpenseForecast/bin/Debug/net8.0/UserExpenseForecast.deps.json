@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "UserExpenseForecast/1.0.0": {
+        "dependencies": {
+          "UserExpenseForecast.Core": "1.0.0"
+        },
         "runtime": {
           "UserExpenseForecast.dll": {}
+        }
+      },
+      "UserExpenseForecast.Core/1.0.0": {
+        "runtime": {
+          "UserExpenseForecast.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "UserExpenseForecast/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserExpenseForecast.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

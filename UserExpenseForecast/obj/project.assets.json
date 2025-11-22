@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "UserExpenseForecast.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UserExpenseForecast.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserExpenseForecast.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "UserExpenseForecast.Core/1.0.0": {
+      "type": "project",
+      "path": "../UserExpenseForecast.Core/UserExpenseForecast.Core.csproj",
+      "msbuildProject": "../UserExpenseForecast.Core/UserExpenseForecast.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "UserExpenseForecast.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Anna\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Anna\\Desktop\\UserExpenseForecast\\UserExpenseForecast.Core\\UserExpenseForecast.Core.csproj": {
+              "projectPath": "C:\\Users\\Anna\\Desktop\\UserExpenseForecast\\UserExpenseForecast.Core\\UserExpenseForecast.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
