@@ -1,0 +1,15 @@
+# Build artifacts
+bin/
+obj/
+
+# Vagrant
+.vagrant/
+
+# NuGet
+*.nupkg
+
+# Debug files
+*.pdb
+*.dll
+*.exe
+*.log
